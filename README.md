@@ -11,14 +11,12 @@ A modern, student-friendly planner for building multi-semester course plans at U
 - [Tech Stack Overview](#tech-stack-overview)
 - [Architecture](#architecture)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
 - [Data & Seeding](#data--seeding)
 - [API Overview](#api-overview)
 - [Theming](#theming)
 - [Quality & DX](#quality--dx)
-- [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap)
-- [License](#license)
+
 
 ---
 
@@ -118,43 +116,6 @@ course-planner/
 └─ README.md
 ```
 
----
-
-## Getting Started
-
-### 1) Backend
-
-```bash
-cd backend
-npm install
-cp .env.example .env
-# set MONGODB_URI if not default (see Env Vars)
-
-npm run dev    # http://localhost:4000
-```
-
-### 2) Frontend
-
-```bash
-cd app/web
-npm install
-cp .env.local.example .env.local
-# ensure NEXT_PUBLIC_API_BASE=http://localhost:4000
-
-npm run dev    # http://localhost:3000
-```
-
-### (Optional) Docker for Mongo + backend
-
-```bash
-# from repo root
-docker compose up -d
-# check logs
-docker compose logs -f backend
-```
-
----
-
 ## Data & Seeding
 
 - CSVs live under `data/` (e.g., `data/catalog/catalog.csv`, `data/gpa/gpa.csv`).
@@ -236,16 +197,6 @@ POST /meta/refresh
 
 ---
 
-## Troubleshooting
-
-- **Frontend can’t reach backend**: check `NEXT_PUBLIC_API_BASE` and CORS (enabled in `server.js`).
-- **Subject list empty**: ensure backend is running and `/courses/subjects` (if implemented) or `/meta` endpoints respond.
-- **Majors only show a few**: scraping might be blocked; backend merges with `src/data/majors.fallback.json`. Expand that file to guarantee completeness.
-- **“Functions cannot be passed to Client Components”**: move event handlers to a `"use client"` component and pass plain props.
-- **Git caught `app/web` as a submodule**: remove `app/web/.git` and re-add as normal folder (monorepo).
-
----
-
 ## Roadmap
 
 - Degree audit MVP (parse audit PDF → requirement satisfaction)
@@ -259,8 +210,3 @@ POST /meta/refresh
 - CI/CD pipelines & cloud deploy
 - Unit + integration tests
 
----
-
-## License
-
-MIT © UIUC Course Planner contributors. Add a `LICENSE` file if not present.
