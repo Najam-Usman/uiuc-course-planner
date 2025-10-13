@@ -7,6 +7,7 @@ A modern, student-friendly planner for building multi-semester course plans at U
 ## Table of Contents
 
 - [Highlights](#highlights)
+- [App Preview](#app-preview)
 - [Live UX Features](#live-ux-features)
 - [Tech Stack Overview](#tech-stack-overview)
 - [Architecture](#architecture)
@@ -31,6 +32,41 @@ A modern, student-friendly planner for building multi-semester course plans at U
 - **Beautiful UI**: sleek, accessible components, keyboard-friendly, dark/light themes.
 
 ---
+
+## 🖼️ App Preview
+
+A quick visual overview of the **UIUC Course Planner** web app — designed for a clean, modern, and intuitive student experience.
+
+| 🏠 Landing Page | 🧭 Onboarding | 📅 Plans Dashboard | 🔍 Course Search |
+|-----------------|---------------|--------------------|------------------|
+| ![Landing Page](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-landing>) | ![Onboarding](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-onboarding>) | ![Plans Page](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-plans>) | ![Search Page](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-search>) |
+
+| 📊 Example Plan | 🎓 Degree Progress |
+|-----------------|--------------------|
+| ![Example Plan](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-example-plan>) | ![Degree Progress](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-degree-progress>) |
+
+---
+
+### ✨ Page Highlights
+
+#### 🏠 **Landing Page**
+The entry point — sleek hero section with theme toggle and quick-start navigation.
+
+#### 🧭 **Onboarding**
+Guides new users through selecting their **college**, **major**, and **start term**, pulling real data from the UIUC catalog.
+
+#### 📅 **Plans Dashboard**
+Manage multiple plans, rename them inline, and toggle overload mode with a clean, card-based layout.
+
+#### 🔍 **Course Search**
+Search courses by subject and title, preview **GPA averages** and **GenEd tags**, and add instantly to a semester.
+
+#### 📊 **Example Plan Page**
+Interactive semester view with real-time credit tracking and inline editing.
+
+#### 🎓 **Degree Progress Page**
+A summarized dashboard visualizing **GenEd**, **major**, and **elective** completion progress.
+
 
 ## Tech Stack Overview
 
