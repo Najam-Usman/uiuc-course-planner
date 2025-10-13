@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* ===== base tokens (used if no theme-* class present) ===== */
+@theme {
+  --color-background: hsl(222 60% 98%);
+  --color-foreground: hsl(222 50% 12%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(222 50% 12%);
+  --color-primary: #FF5F05;            /* Illinois orange */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #13294B;          /* deep UIUC blue */
+  --color-secondary-foreground: #EAF0FF;
+  --color-accent: hsl(215 70% 96%);
+  --color-accent-foreground: hsl(222 50% 18%);
+  --color-border: hsl(215 28% 86%);
+  --color-ring: #FF5F05;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --shadow-soft: 0 20px 50px -24px rgba(19,41,75,.35);
+  --shadow-card: 0 14px 34px -20px rgba(19,41,75,.22);
+  --shadow-glow: 0 0 0 5px rgba(255,95,5,.28);
+
+  --background-image-app: linear-gradient(180deg,#F9FBFF 0%,#F4F7FF 100%);
+}
+
+/* ===== THEME 1: Midnight Indigo (moody) ===== */
+.theme-midnight {
+  --color-background: hsl(229 40% 6%);
+  --color-foreground: hsl(210 40% 98%);
+  --color-card: hsl(229 36% 10%);
+  --color-card-foreground: hsl(210 40% 98%);
+  --color-secondary: hsl(230 28% 16%);
+  --color-secondary-foreground: hsl(210 40% 98%);
+  --color-accent: hsl(234 36% 18%);
+  --color-accent-foreground: hsl(210 40% 98%);
+  --color-border: hsl(230 20% 28%);
+  --color-ring: #FF7A33; /* warmer glow */
+
+  --shadow-card: 0 24px 60px -28px rgba(0,0,0,.6);
+  --background-image-app:
+    radial-gradient(1000px 500px at 0% -10%, rgba(255,122,51,.14), transparent),
+    radial-gradient(900px 500px at 120% 10%, rgba(54,83,166,.25), transparent),
+    linear-gradient(180deg,#0B0F1A 0%, #0E1524 100%);
+}
+
+/* ===== THEME 2: Electric Sunset (warm, bold) ===== */
+.theme-sunset {
+  --color-background: hsl(18 100% 98%);
+  --color-foreground: hsl(222 50% 12%);
+  --color-card: #ffffff;
+  --color-card-foreground: hsl(222 50% 12%);
+  --color-secondary: hsl(18 90% 55%);
+  --color-secondary-foreground: #210c00;
+  --color-accent: hsl(14 100% 95%);
+  --color-accent-foreground: #5b2200;
+  --color-border: hsl(18 45% 82%);
+  --color-ring: #ff7a33;
+
+  --background-image-app:
+    radial-gradient(1400px 600px at -10% -20%, rgba(255,120,60,.22), transparent),
+    radial-gradient(1000px 560px at 120% 0%, rgba(255,0,128,.12), transparent),
+    linear-gradient(180deg,#FFF7F2 0%, #FFEFE7 100%);
+}
+
+/* ===== THEME 3: Neo Mint (dark charcoal + mint/blue accents) ===== */
+.theme-neo {
+  --color-background: hsl(220 16% 10%);
+  --color-foreground: hsl(210 40% 98%);
+  --color-card: hsl(220 14% 14%);
+  --color-card-foreground: hsl(210 40% 98%);
+  --color-secondary: #00E6A8;            /* mint */
+  --color-secondary-foreground: #06241A;
+  --color-accent: #0EA5E9;               /* electric blue */
+  --color-accent-foreground: #041823;
+  --color-border: hsl(215 18% 28%);
+  --color-ring: #00E6A8;
+
+  --shadow-card: 0 24px 60px -30px rgba(0,0,0,.55);
+  --background-image-app:
+    radial-gradient(1100px 520px at -10% -20%, rgba(14,165,233,.16), transparent),
+    radial-gradient(900px 520px at 120% 5%, rgba(0,230,168,.18), transparent),
+    linear-gradient(180deg,#0B1116 0%, #0C1218 100%);
+}
+
+/* ===== Base & components (theme-agnostic) ===== */
+@layer base {
+  * { @apply border-border; }
+  body { @apply min-h-screen bg-background text-foreground; background-image: var(--background-image-app); }
+}
+
+@layer components {
+  /* Surfaces */
+  .card { @apply rounded-2xl border bg-card shadow-[var(--shadow-card)]; }
+  .surface { @apply rounded-2xl border bg-card/95 shadow-[var(--shadow-card)]; }
+
+  /* Buttons */
+  .btn { @apply inline-flex items-center justify-center rounded-xl border px-3 py-2 text-sm transition; }
+  .btn-primary { @apply bg-primary text-primary-foreground border-transparent hover:opacity-95 focus-visible:shadow-[var(--shadow-glow)]; }
+  .btn-ghost   { @apply bg-card text-foreground border border-border hover:bg-accent; }  /* <<< readable on dark */
+  .icon-btn    { @apply inline-flex h-9 w-9 items-center justify-center rounded-xl border bg-card text-foreground hover:bg-accent; }
+
+  /* Header chips (for Progress/Plans/Search) */
+  .chip { @apply inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs bg-card/90 text-foreground; }
+  .chip-active { @apply bg-primary text-primary-foreground border-transparent; }
+
+  /* Inputs */
+  .input { @apply w-full rounded-xl border border-border bg-card text-foreground px-3 py-2 text-sm focus:outline-none focus-visible:shadow-[var(--shadow-glow)]; }
+
+  /* Menus / dropdowns (subject list) */
+  .menu { @apply rounded-xl border border-border bg-card text-foreground shadow-[var(--shadow-card)]; }
+  .menu-item {
+    @apply flex w-full items-center justify-between px-3 py-2 text-left text-sm hover:bg-accent;
+  }
+
+  /* Chips / tags */
+  .pill { @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs; }
+  .pill-blue   { @apply bg-[#D9EDFF] text-[#0E3A66] border-[#B9DEFF]; }
+  .pill-green  { @apply bg-[#CCF5E6] text-[#0E5B33] border-[#B1F0DA]; }
+  .pill-orange { @apply bg-[#FFE5D6] text-[#7A2B00] border-[#FFD2BB]; }
+  .pill-pink   { @apply bg-[#FFE0F0] text-[#65123B] border-[#FFCBE6]; }
+  .pill-mint   { @apply bg-[#DAFFF3] text-[#064E3B] border-[#C2FFEC]; }
+}
+
+@layer components {
+  /* small button variant */
+  .btn { @apply inline-flex items-center justify-center rounded-xl border px-3 py-2 text-sm transition; }
+  .btn.btn-ghost { @apply bg-card text-foreground border border-border hover:bg-accent; }
+  .btn.btn-primary { @apply bg-primary text-primary-foreground border-transparent hover:opacity-95 focus-visible:shadow-[var(--shadow-glow)]; }
+}
+
+/* compact icon buttons already exist; ensure they’re small */
+.icon-btn { @apply inline-flex items-center justify-center rounded-xl border bg-card text-foreground hover:bg-accent; }
+
+/* nicer dark-friendly scrollbar for scrollable lists only */
+.custom-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+.custom-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); border-radius: 999px; }
+.custom-scroll::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.28); }
+.custom-scroll::-webkit-scrollbar-track { background: transparent; }

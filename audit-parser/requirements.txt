@@ -1,0 +1,6 @@
+# PDF text extraction
+pdfplumber==0.10.3
+
+# Better regex engine (we use it in parser.py)
+regex==2024.5.15
+click==8.1.7

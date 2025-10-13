@@ -1,0 +1,447 @@
+[
+  {
+    "name": "Aerospace Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Agricultural & Biological Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Bioengineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Civil Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Computer Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Computer Science (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Electrical Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Engineering Mechanics (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Industrial Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Materials Science & Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Mechanical Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Nuclear, Plasma, & Radiological Engineering (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Systems Engineering & Design (BS)",
+    "degree": "BS",
+    "collegeName": "Grainger College of Engineering"
+  },
+  {
+    "name": "Actuarial Science (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "African American Studies (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Anthropology (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Astronomy (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Biochemistry (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Chemistry (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Classics (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Communication (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Comparative & World Literature (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "East Asian Languages & Cultures (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Economics (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "English (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "French (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Geography & GIS (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Geology (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Germanic Studies (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "History (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Integrative Biology (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Latina/Latino Studies (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Linguistics (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Mathematics (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Molecular & Cellular Biology (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Philosophy (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Physics (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Political Science (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Psychology (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Religion (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Sociology (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Spanish (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Statistics (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Earth, Society & Environmental Sustainability (BSLAS)",
+    "degree": "BSLAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Global Studies (BALAS)",
+    "degree": "BALAS",
+    "collegeName": "College of Liberal Arts & Sciences"
+  },
+  {
+    "name": "Accountancy (BS)",
+    "degree": "BS",
+    "collegeName": "Gies College of Business"
+  },
+  {
+    "name": "Finance (BS)",
+    "degree": "BS",
+    "collegeName": "Gies College of Business"
+  },
+  {
+    "name": "Information Systems (BS)",
+    "degree": "BS",
+    "collegeName": "Gies College of Business"
+  },
+  {
+    "name": "Operations Management (BS)",
+    "degree": "BS",
+    "collegeName": "Gies College of Business"
+  },
+  {
+    "name": "Marketing (BS)",
+    "degree": "BS",
+    "collegeName": "Gies College of Business"
+  },
+  {
+    "name": "Business Analytics (BS)",
+    "degree": "BS",
+    "collegeName": "Gies College of Business"
+  },
+  {
+    "name": "Supply Chain Management (BS)",
+    "degree": "BS",
+    "collegeName": "Gies College of Business"
+  },
+  {
+    "name": "Management (BS)",
+    "degree": "BS",
+    "collegeName": "Gies College of Business"
+  },
+  {
+    "name": "Agricultural & Consumer Economics (BS)",
+    "degree": "BS",
+    "collegeName": "College of ACES"
+  },
+  {
+    "name": "Animal Sciences (BS)",
+    "degree": "BS",
+    "collegeName": "College of ACES"
+  },
+  {
+    "name": "Crop Sciences (BS)",
+    "degree": "BS",
+    "collegeName": "College of ACES"
+  },
+  {
+    "name": "Food Science & Human Nutrition (BS)",
+    "degree": "BS",
+    "collegeName": "College of ACES"
+  },
+  {
+    "name": "Human Development & Family Studies (BS)",
+    "degree": "BS",
+    "collegeName": "College of ACES"
+  },
+  {
+    "name": "Natural Resources & Environmental Sciences (BS)",
+    "degree": "BS",
+    "collegeName": "College of ACES"
+  },
+  {
+    "name": "Early Childhood Education (BS)",
+    "degree": "BS",
+    "collegeName": "College of Education"
+  },
+  {
+    "name": "Elementary Education (BS)",
+    "degree": "BS",
+    "collegeName": "College of Education"
+  },
+  {
+    "name": "Middle Grades Education (BS)",
+    "degree": "BS",
+    "collegeName": "College of Education"
+  },
+  {
+    "name": "Special Education (BS)",
+    "degree": "BS",
+    "collegeName": "College of Education"
+  },
+  {
+    "name": "Learning & Education Studies (BS)",
+    "degree": "BS",
+    "collegeName": "College of Education"
+  },
+  {
+    "name": "Architecture (BSAS)",
+    "degree": "BSAS",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Landscape Architecture (BSLA)",
+    "degree": "BSLA",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Urban Planning (BUP)",
+    "degree": "BUP",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Industrial Design (BFA)",
+    "degree": "BFA",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Graphic Design (BFA)",
+    "degree": "BFA",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Studio Art (BFA)",
+    "degree": "BFA",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Acting (BFA)",
+    "degree": "BFA",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Theatre Studies (BA)",
+    "degree": "BA",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Music Composition (BM)",
+    "degree": "BM",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Instrumental Performance (BM)",
+    "degree": "BM",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Jazz Performance (BM)",
+    "degree": "BM",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Voice Performance (BM)",
+    "degree": "BM",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Music Education (BME)",
+    "degree": "BME",
+    "collegeName": "College of Fine & Applied Arts"
+  },
+  {
+    "name": "Information Sciences (BS)",
+    "degree": "BS",
+    "collegeName": "School of Information Sciences"
+  },
+  {
+    "name": "Information Sciences + Data Science (BS)",
+    "degree": "BS",
+    "collegeName": "School of Information Sciences"
+  },
+  {
+    "name": "Community Health (BS)",
+    "degree": "BS",
+    "collegeName": "College of Applied Health Sciences"
+  },
+  {
+    "name": "Kinesiology (BS)",
+    "degree": "BS",
+    "collegeName": "College of Applied Health Sciences"
+  },
+  {
+    "name": "Recreation, Sport & Tourism (BS)",
+    "degree": "BS",
+    "collegeName": "College of Applied Health Sciences"
+  },
+  {
+    "name": "Speech & Hearing Science (BS)",
+    "degree": "BS",
+    "collegeName": "College of Applied Health Sciences"
+  },
+  {
+    "name": "Interdisciplinary Health Sciences (BS)",
+    "degree": "BS",
+    "collegeName": "College of Applied Health Sciences"
+  },
+  {
+    "name": "Advertising (BS)",
+    "degree": "BS",
+    "collegeName": "College of Media"
+  },
+  {
+    "name": "Journalism (BS)",
+    "degree": "BS",
+    "collegeName": "College of Media"
+  },
+  {
+    "name": "Media & Cinema Studies (BS)",
+    "degree": "BS",
+    "collegeName": "College of Media"
+  },
+  {
+    "name": "Sports Media (BS)",
+    "degree": "BS",
+    "collegeName": "College of Media"
+  },
+  {
+    "name": "Undeclared (DGS)",
+    "degree": "DGS",
+    "collegeName": "Division of General Studies"
+  }
+]

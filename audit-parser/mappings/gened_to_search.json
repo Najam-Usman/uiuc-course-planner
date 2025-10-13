@@ -1,0 +1,16 @@
+{
+  "ADVANCED COMPOSITION": { "tag": "ACP", "searchQuery": "gened:ACP" },
+  "UNIVERSITY COMPOSITION I REQUIREMENT": { "tag": "CompI", "searchQuery": "gened:CompI" },
+  "QUANTITATIVE REASONING I": { "tag": "QR1", "searchQuery": "gened:QR1" },
+  "QUANTITATIVE REASONING II": { "tag": "QR2", "searchQuery": "gened:QR2" },
+  "CULTURAL STUDIES": {
+    "subAreas": {
+      "NON-WESTERN CULTURE(S)": { "tag": "NW", "searchQuery": "gened:NW" },
+      "U.S. MINORITY CULTURES": { "tag": "US", "searchQuery": "gened:US" },
+      "WESTERN/COMPARATIVE CULTURE(S)": { "tag": "WCC", "searchQuery": "gened:WCC" }
+    }
+  },
+  "NATURAL SCIENCES AND TECHNOLOGY": { "tag": "NST", "searchQuery": "gened:NST" },
+  "HUMANITIES & THE ARTS": { "tag": "HUM", "searchQuery": "gened:HUM" },
+  "SOCIAL & BEHAVIORAL SCIENCES": { "tag": "SBS", "searchQuery": "gened:SBS" }
+}

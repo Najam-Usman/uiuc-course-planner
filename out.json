@@ -1,0 +1,970 @@
+{
+  "meta": {
+    "program_code": "0464",
+    "degree": "BSLA",
+    "catalog_year_raw": "202508",
+    "catalog_year": "2025-2026",
+    "prepared_on": "Prepared On 10/11/2025 12:12 PM Program Code 0464 BSLA Catalog Year 202508",
+    "program": "Statistics And Computer Science"
+  },
+  "legend": {
+    "NO": "REQUIREMENT NOT COMPLETE",
+    "OK": "REQUIREMENT COMPLETED",
+    "IP": "COURSES IN PROGRESS",
+    "-": "SUB-REQ. NOT COMPLETED",
+    ">I": "IN PROGRESS COURSE",
+    ">C": "INDIRECT DUPLICATION",
+    ">S": "HOURS SPLIT",
+    ">R": "REPEATABLE COURSE",
+    ">D": "DUPLICATED COURSE",
+    ">X": "NOT USED FOR GRADUATION",
+    ">-": "CREDIT HAS BEEN REDUCED",
+    ">W": "WHAT IF/PLANNED COURSE"
+  },
+  "courses": [
+    {
+      "term": "FA25",
+      "subject": "CS",
+      "number": "225",
+      "section": "AL2",
+      "credits": 4.0,
+      "grade": "IP",
+      "flags": [
+        ">I"
+      ],
+      "status": "in_progress",
+      "raw": "FA25 CS 225 AL2 4.0 IP >I"
+    },
+    {
+      "term": "FA25",
+      "subject": "MACS",
+      "number": "100",
+      "section": "ADH",
+      "credits": 3.0,
+      "grade": "IP",
+      "flags": [
+        ">I"
+      ],
+      "status": "in_progress",
+      "raw": "FA25 MACS 100 ADH 3.0 IP >I"
+    },
+    {
+      "term": "FA25",
+      "subject": "MATH",
+      "number": "257",
+      "section": "OL1",
+      "credits": 3.0,
+      "grade": "IP",
+      "flags": [
+        ">C"
+      ],
+      "status": "in_progress",
+      "raw": "FA25 MATH 257 OL1 3.0 IP >C"
+    },
+    {
+      "term": "FA25",
+      "subject": "MUS",
+      "number": "132",
+      "section": "BL1",
+      "credits": 3.0,
+      "grade": "IP",
+      "flags": [
+        ">I"
+      ],
+      "status": "in_progress",
+      "raw": "FA25 MUS 132 BL1 3.0 IP >I"
+    },
+    {
+      "term": "FA25",
+      "subject": "STAT",
+      "number": "400",
+      "section": "YL1",
+      "credits": 4.0,
+      "grade": "IP",
+      "flags": [
+        ">I"
+      ],
+      "status": "in_progress",
+      "raw": "FA25 STAT 400 YL1 4.0 IP >I"
+    },
+    {
+      "term": "FA24",
+      "subject": "LAS",
+      "number": "101",
+      "section": "81",
+      "credits": 1.0,
+      "grade": "A+",
+      "flags": [],
+      "status": "completed",
+      "raw": "FA24 LAS 101 81 1.0 A+"
+    },
+    {
+      "term": "FA24",
+      "subject": "LAS",
+      "number": "100",
+      "section": "OL1",
+      "credits": 2.0,
+      "grade": "A",
+      "flags": [],
+      "status": "completed",
+      "raw": "FA24 LAS 100 OL1 2.0 A"
+    },
+    {
+      "term": "FA24",
+      "subject": "RHET",
+      "number": "105",
+      "section": "1",
+      "credits": 4.0,
+      "grade": "PS",
+      "flags": [],
+      "status": "completed",
+      "raw": "FA24 RHET 105 1 4.0 PS"
+    },
+    {
+      "term": "SU24",
+      "subject": "MATH",
+      "number": "220",
+      "section": null,
+      "credits": 5.0,
+      "grade": "CR",
+      "flags": [],
+      "status": "completed",
+      "raw": "SU24 MATH 220 5.0 CR ADVLEVEL: MATH 999"
+    },
+    {
+      "term": "SU24",
+      "subject": "PHYS",
+      "number": "211",
+      "section": null,
+      "credits": 4.0,
+      "grade": "CR",
+      "flags": [],
+      "status": "completed",
+      "raw": "SU24 PHYS 211 4.0 CR ADVLEVEL: PHYS 999"
+    },
+    {
+      "term": "FA24",
+      "subject": "ECON",
+      "number": "102",
+      "section": "BD!",
+      "credits": 3.0,
+      "grade": "A+",
+      "flags": [],
+      "status": "completed",
+      "raw": "FA24 ECON 102 BD! 3.0 A+"
+    },
+    {
+      "term": "SU24",
+      "subject": "PHYS",
+      "number": "212",
+      "section": null,
+      "credits": 4.0,
+      "grade": "CR",
+      "flags": [],
+      "status": "completed",
+      "raw": "SU24 PHYS 212 4.0 CR ADVLEVEL: PHYS 999"
+    },
+    {
+      "term": "FA24",
+      "subject": "MATH",
+      "number": "231",
+      "section": "AL4",
+      "credits": 3.0,
+      "grade": "A",
+      "flags": [],
+      "status": "completed",
+      "raw": "FA24 MATH 231 AL4 3.0 A"
+    },
+    {
+      "term": "SP25",
+      "subject": "MATH",
+      "number": "241",
+      "section": "AL1",
+      "credits": 4.0,
+      "grade": "A-",
+      "flags": [],
+      "status": "completed",
+      "raw": "SP25 MATH 241 AL1 4.0 A-"
+    },
+    {
+      "term": "FA24",
+      "subject": "CS",
+      "number": "124",
+      "section": "AL2",
+      "credits": 3.0,
+      "grade": "A",
+      "flags": [],
+      "status": "completed",
+      "raw": "FA24 CS 124 AL2 3.0 A"
+    },
+    {
+      "term": "SP25",
+      "subject": "CS",
+      "number": "128",
+      "section": "AL2",
+      "credits": 3.0,
+      "grade": "A",
+      "flags": [],
+      "status": "completed",
+      "raw": "SP25 CS 128 AL2 3.0 A"
+    },
+    {
+      "term": "SP25",
+      "subject": "CS",
+      "number": "173",
+      "section": "AL4",
+      "credits": 3.0,
+      "grade": "A-",
+      "flags": [],
+      "status": "completed",
+      "raw": "SP25 CS 173 AL4 3.0 A-"
+    },
+    {
+      "term": "FA24",
+      "subject": "STAT",
+      "number": "107",
+      "section": "L2",
+      "credits": 4.0,
+      "grade": "A",
+      "flags": [],
+      "status": "completed",
+      "raw": "FA24 STAT 107 L2 4.0 A"
+    },
+    {
+      "term": "SP25",
+      "subject": "STAT",
+      "number": "207",
+      "section": "BL1",
+      "credits": 4.0,
+      "grade": "A",
+      "flags": [],
+      "status": "completed",
+      "raw": "SP25 STAT 207 BL1 4.0 A"
+    },
+    {
+      "term": "FA24",
+      "subject": "TE",
+      "number": "100",
+      "section": "A",
+      "credits": 1.0,
+      "grade": "B-",
+      "flags": [],
+      "status": "completed",
+      "raw": "FA24 TE 100 A 1.0 B-"
+    },
+    {
+      "term": "SU24",
+      "subject": "MATH",
+      "number": "225",
+      "section": null,
+      "credits": 2.0,
+      "grade": "CR",
+      "flags": [
+        ">C"
+      ],
+      "status": "ignored",
+      "raw": "SU24 MATH 225 2.0 CR >C ADVLEVEL: MATH 999"
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "successfully_completed",
+      "section_title": "SUCCESSFULLY COMPLETED.",
+      "classification": "other",
+      "items": [
+        {
+          "id": "auto_item_1_0",
+          "header_raw": "(auto)",
+          "kind": "courses",
+          "earned": 2.0,
+          "needed": null,
+          "unit": "COURSES",
+          "select_from": [],
+          "combos": [],
+          "satisfied_by": [
+            "LAS 101"
+          ],
+          "needed_courses": [],
+          "status": "incomplete",
+          "raw_lines": [
+            "For a complete list of UIUC approved General Education",
+            "Click the \"General Education Requirements\" link for a list",
+            "of General Education courses by category. ORIENTATION & PROFESSIONAL DEVELOPMENT",
+            "1) LAS 101 + LAS 112 FOR"
+          ]
+        }
+      ],
+      "raw_lines": [
+        "EARNED: 17.0 HOURS",
+        "FA25 CS 225 AL2 4.0 IP >I",
+        "FA25 MACS 100 ADH 3.0 IP >I",
+        "FA25 MATH 257 OL1 3.0 IP >C",
+        "FA25 MUS 132 BL1 3.0 IP >I",
+        "FA25 STAT 400 YL1 4.0 IP >I",
+        "For a complete list of UIUC approved General Education",
+        "Click the \"General Education Requirements\" link for a list",
+        "of General Education courses by category. ORIENTATION & PROFESSIONAL DEVELOPMENT",
+        "EARNED: 2 COURSES",
+        "1) LAS 101 + LAS 112 FOR"
+      ]
+    },
+    {
+      "section_id": "las_access_achievement_program_students",
+      "section_title": "LAS ACCESS & ACHIEVEMENT PROGRAM STUDENTS:",
+      "classification": "other",
+      "items": [
+        {
+          "id": "las_access_achievement_program_students_item_0",
+          "header_raw": "OR) LAS 100 + LAS 101 FOR INTERNATIONAL STUDENTS:",
+          "kind": "other",
+          "earned": null,
+          "needed": null,
+          "unit": null,
+          "select_from": [],
+          "combos": [],
+          "satisfied_by": [],
+          "needed_courses": [],
+          "status": "incomplete",
+          "raw_lines": []
+        }
+      ],
+      "raw_lines": [
+        "FA24 LAS 101 81 1.0 A+",
+        "1 COURSE TAKEN",
+        "FA24 LAS 100 OL1 2.0 A"
+      ]
+    },
+    {
+      "section_id": "university_composition_i_requirement_earned_1_sub_group",
+      "section_title": "UNIVERSITY COMPOSITION I REQUIREMENT EARNED: 1 SUB-GROUP",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "one_rhetoric_course_1_course_taken",
+      "section_title": "ONE RHETORIC COURSE 1 COURSE TAKEN",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "FA24 RHET 105 1 4.0 PS",
+        "ADVANCED COMPOSITION NOTE: Most transferred coursework is not",
+        "acceptable in this requirement. Please check with the",
+        "College Office for additional information. NEEDS: 1 COURSE"
+      ]
+    },
+    {
+      "section_id": "quantitative_reasoning_i_earned_1_course",
+      "section_title": "QUANTITATIVE REASONING I EARNED: 1 COURSE",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "SU24 MATH 220 5.0 CR ADVLEVEL: MATH 999"
+      ]
+    },
+    {
+      "section_id": "quantitative_reasoning_ii_earned_1_course",
+      "section_title": "QUANTITATIVE REASONING II EARNED: 1 COURSE",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "one_course_designated_as_qr2_or_a_second_qr1_course",
+      "section_title": "ONE COURSE DESIGNATED AS QR2 OR A SECOND QR1 COURSE",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "SU24 PHYS 211 4.0 CR ADVLEVEL: PHYS 999"
+      ]
+    },
+    {
+      "section_id": "cultural_studies",
+      "section_title": "CULTURAL STUDIES",
+      "classification": "gened",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "1_western_comparative_culture_s",
+      "section_title": "1) WESTERN/COMPARATIVE CULTURE(S)",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "1 COURSE TAKEN",
+        "FA25 MACS 100 ADH 3.0 IP >I"
+      ]
+    },
+    {
+      "section_id": "2_non_western_culture_s_needs_1_course",
+      "section_title": "2) NON-WESTERN CULTURE(S) NEEDS: 1 COURSE",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "3_u_s_minority_cultures_s",
+      "section_title": "3) U.S. MINORITY CULTURES(S)",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "1 COURSE TAKEN",
+        "FA25 MUS 132 BL1 3.0 IP >I"
+      ]
+    },
+    {
+      "section_id": "first_second_level_language_language_requirement",
+      "section_title": "FIRST & SECOND LEVEL LANGUAGE LANGUAGE REQUIREMENT",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "4th_level_of_one_language_needs_1_course",
+      "section_title": "4TH LEVEL OF ONE LANGUAGE NEEDS: 1 COURSE",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "or_3rd_level_of_two_languages_1_course_taken",
+      "section_title": "OR) 3RD LEVEL OF TWO LANGUAGES 1 COURSE TAKEN",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "FA24 HSLFR 3.0 0.0 HS"
+      ]
+    },
+    {
+      "section_id": "needs_1_course_general_education",
+      "section_title": "NEEDS: 1 COURSE GENERAL EDUCATION",
+      "classification": "gened",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "earned_2_sub_groups_needs_1_sub_group",
+      "section_title": "EARNED: 2 SUB-GROUPS NEEDS: 1 SUB-GROUP",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "1_humanities_and_the_arts",
+      "section_title": "1) HUMANITIES AND THE ARTS",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "6.0 HOURS ADDED",
+        "FA25 MACS 100 ADH 3.0 IP >I",
+        "FA25 MUS 132 BL1 3.0 IP >I"
+      ]
+    },
+    {
+      "section_id": "2_social_and_behavioral_science",
+      "section_title": "2) SOCIAL AND BEHAVIORAL SCIENCE",
+      "classification": "other",
+      "items": [
+        {
+          "id": "auto_item_18_0",
+          "header_raw": "(auto)",
+          "kind": "hours",
+          "earned": null,
+          "needed": 3.0,
+          "unit": "HOURS",
+          "select_from": [],
+          "combos": [],
+          "satisfied_by": [],
+          "needed_courses": [],
+          "status": "incomplete",
+          "raw_lines": [
+            "3)"
+          ]
+        }
+      ],
+      "raw_lines": [
+        "3.0 HOURS ADDED",
+        "FA24 ECON 102 BD! 3.0 A+",
+        "NEEDS: 3.0 HOURS",
+        "3)"
+      ]
+    },
+    {
+      "section_id": "natural_sciences_and_technology",
+      "section_title": "NATURAL SCIENCES AND TECHNOLOGY",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "8.0 HOURS ADDED",
+        "SU24 PHYS 211 4.0 CR ADVLEVEL: PHYS 999",
+        "SU24 PHYS 212 4.0 CR ADVLEVEL: PHYS 999"
+      ]
+    },
+    {
+      "section_id": "statistics_and_computer_science_major",
+      "section_title": "STATISTICS AND COMPUTER SCIENCE MAJOR",
+      "classification": "major_core",
+      "items": [
+        {
+          "id": "auto_item_20_0",
+          "header_raw": "(auto)",
+          "kind": "hours",
+          "earned": 40.0,
+          "needed": 28.0,
+          "unit": "HOURS",
+          "select_from": [],
+          "combos": [],
+          "satisfied_by": [],
+          "needed_courses": [],
+          "status": "incomplete",
+          "raw_lines": []
+        }
+      ],
+      "raw_lines": [
+        "EARNED: 40.0 HOURS",
+        "NEEDS: 28.0 HOURS"
+      ]
+    },
+    {
+      "section_id": "1_calculus_sequence_3_groups_completed",
+      "section_title": "1) CALCULUS SEQUENCE 3 GROUPS COMPLETED",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "SU24 MATH 220 5.0 CR ADVLEVEL: MATH 999",
+        "FA24 MATH 231 AL4 3.0 A",
+        "SP25 MATH 241 AL1 4.0 A-"
+      ]
+    },
+    {
+      "section_id": "2_linear_algebra_1_course_taken",
+      "section_title": "2) LINEAR ALGEBRA 1 COURSE TAKEN",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "FA25 MATH 257 OL1 3.0 IP >C"
+      ]
+    },
+    {
+      "section_id": "3_required_computer_science_foundation_4_courses_taken",
+      "section_title": "3) REQUIRED COMPUTER SCIENCE FOUNDATION 4 COURSES TAKEN",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "FA24 CS 124 AL2 3.0 A",
+        "SP25 CS 128 AL2 3.0 A",
+        "SP25 CS 173 AL4 3.0 A-",
+        "FA25 CS 225 AL2 4.0 IP >I"
+      ]
+    },
+    {
+      "section_id": "needs_4_courses_select_from_cs_222_357_374_421",
+      "section_title": "NEEDS: 4 COURSES SELECT FROM: CS 222, 357, 374, 421",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "4_one_of_the_following_combinations_cs_233_and_cs_341",
+      "section_title": "4) ONE OF THE FOLLOWING COMBINATIONS: CS 233 AND CS 341",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "needs_2_courses_select_from_cs_233_341",
+      "section_title": "NEEDS: 2 COURSES SELECT FROM: CS 233, 341",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "OR) CS 340 PLUS TWO CS COURSES ABOVE 403, (excluding CS 421 and CS 491)"
+      ]
+    },
+    {
+      "section_id": "needs_3_courses_5_required_statistics_courses",
+      "section_title": "NEEDS: 3 COURSES 5) REQUIRED STATISTICS COURSES",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "2 COURSES TAKEN",
+        "FA24 STAT 107 L2 4.0 A",
+        "FA25 STAT 400 YL1 4.0 IP >I"
+      ]
+    },
+    {
+      "section_id": "needs_3_courses_select_from_stat_410_425_426",
+      "section_title": "NEEDS: 3 COURSES SELECT FROM: STAT 410, 425, 426",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "6_statistical_application_elective_needs_1_course",
+      "section_title": "6) STATISTICAL APPLICATION ELECTIVE: NEEDS: 1 COURSE",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "SELECT FROM: STAT 428, 431, 432, 448, 440 7) COMPUTATIONAL APPLICATION ELECTIVE:"
+      ]
+    },
+    {
+      "section_id": "needs_1_course_select_from_cs_410_411_412_446_481_482",
+      "section_title": "NEEDS: 1 COURSE SELECT FROM: CS 410, 411, 412, 446, 481, 482",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "other_courses_counting_toward_your_major_grade_point_average",
+      "section_title": "OTHER COURSES COUNTING TOWARD YOUR MAJOR GRADE POINT AVERAGE",
+      "classification": "major_core",
+      "items": [],
+      "raw_lines": [
+        "1 COURSE TAKEN",
+        "SP25 STAT 207 BL1 4.0 A"
+      ]
+    },
+    {
+      "section_id": "major_gpa_requirement",
+      "section_title": "MAJOR GPA REQUIREMENT -",
+      "classification": "major_gpa",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "your_grade_point_average_for_all_courses_included_in_your",
+      "section_title": "YOUR GRADE POINT AVERAGE FOR ALL COURSES INCLUDED IN YOUR",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "major_gpa_taken_on_this_campus_must_be_2_0",
+      "section_title": "MAJOR GPA TAKEN ON THIS CAMPUS MUST BE 2.0.",
+      "classification": "major_gpa",
+      "items": [],
+      "raw_lines": [
+        "24.0 GPA HOURS EARNED 93.69 POINTS 3.90 GPA",
+        "FA24 CS 124 AL2 3.0 A",
+        "FA24 MATH 231 AL4 3.0 A",
+        "FA24 STAT 107 L2 4.0 A",
+        "SP25 CS 128 AL2 3.0 A",
+        "SP25 CS 173 AL4 3.0 A-",
+        "SP25 MATH 241 AL1 4.0 A-",
+        "SP25 STAT 207 BL1 4.0 A"
+      ]
+    },
+    {
+      "section_id": "major_gpa_requirement",
+      "section_title": "MAJOR GPA REQUIREMENT -",
+      "classification": "major_gpa",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "your_combined_grade_point_average_for_all_courses_included",
+      "section_title": "YOUR COMBINED GRADE POINT AVERAGE FOR ALL COURSES INCLUDED",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "in_your_major_gpa_taken_on_this_campus_and_taken",
+      "section_title": "IN YOUR MAJOR GPA (TAKEN ON THIS CAMPUS AND TAKEN",
+      "classification": "major_gpa",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "elsewhere_must_be_2_0",
+      "section_title": "ELSEWHERE) MUST BE 2.0.",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "24.0 GPA HOURS EARNED 93.69 POINTS 3.90 GPA",
+        "SU24 MATH 220 5.0 CR ADVLEVEL: MATH 999",
+        "FA24 CS 124 AL2 3.0 A",
+        "FA24 MATH 231 AL4 3.0 A",
+        "FA24 STAT 107 L2 4.0 A",
+        "SP25 CS 128 AL2 3.0 A",
+        "SP25 CS 173 AL4 3.0 A-",
+        "SP25 MATH 241 AL1 4.0 A-",
+        "SP25 STAT 207 BL1 4.0 A"
+      ]
+    },
+    {
+      "section_id": "12_hours_advanced_level_course_work_in_your_major_must_be_taken_on_this_campus",
+      "section_title": "12 HOURS ADVANCED LEVEL COURSE WORK IN YOUR MAJOR MUST BE TAKEN ON THIS CAMPUS",
+      "classification": "major_core",
+      "items": [
+        {
+          "id": "auto_item_39_0",
+          "header_raw": "(auto)",
+          "kind": "hours",
+          "earned": 4.0,
+          "needed": 17.0,
+          "unit": "HOURS",
+          "select_from": [],
+          "combos": [],
+          "satisfied_by": [],
+          "needed_courses": [],
+          "status": "incomplete",
+          "raw_lines": [
+            "LAS ADVANCED HOUR REQUIREMENT (21 HOURS 300 or 400 LEVEL COURSES)",
+            "(Transferred Courses Included)",
+            "See Residency Requirement below."
+          ]
+        }
+      ],
+      "raw_lines": [
+        "EARNED: 4.0 HOURS",
+        "NEEDS: 8.0 HOURS",
+        "FA25 STAT 400 YL1 4.0 IP >I",
+        "LAS ADVANCED HOUR REQUIREMENT (21 HOURS 300 or 400 LEVEL COURSES)",
+        "(Transferred Courses Included)",
+        "See Residency Requirement below.",
+        "EARNED: 4.0 HOURS",
+        "NEEDS: 17.0 HOURS",
+        "FA25 STAT 400 YL1 4.0 IP >I"
+      ]
+    },
+    {
+      "section_id": "university_residency_requirement",
+      "section_title": "UNIVERSITY RESIDENCY REQUIREMENT",
+      "classification": "residency",
+      "items": [
+        {
+          "id": "auto_item_40_0",
+          "header_raw": "(auto)",
+          "kind": "hours",
+          "earned": 52.0,
+          "needed": 17.0,
+          "unit": "HOURS",
+          "select_from": [],
+          "combos": [],
+          "satisfied_by": [],
+          "needed_courses": [],
+          "status": "incomplete",
+          "raw_lines": [
+            "UNIVERSITY ADVANCED HOUR REQUIREMENT (Transferred Courses Excluded)",
+            "(300 Level and above. Excludes MUSC 487-9 and any 388",
+            "credit not approved for Advanced Hours. Additional",
+            "college level restrictions may apply.)"
+          ]
+        }
+      ],
+      "raw_lines": [
+        "EARNED: 52.0 HOURS",
+        "UNIVERSITY ADVANCED HOUR REQUIREMENT (Transferred Courses Excluded)",
+        "(300 Level and above. Excludes MUSC 487-9 and any 388",
+        "credit not approved for Advanced Hours. Additional",
+        "college level restrictions may apply.)",
+        "( 4.0 HOURS TAKEN)",
+        "FA25 STAT 400 YL1 4.0 IP >I",
+        "NEEDS: 17.0 HOURS"
+      ]
+    },
+    {
+      "section_id": "45_hours_completed_on_this_campus",
+      "section_title": "45 HOURS COMPLETED ON THIS CAMPUS",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "52.0 HOURS ADDED"
+      ]
+    },
+    {
+      "section_id": "minimum_of_120_hours_required_earned_hours",
+      "section_title": "MINIMUM OF 120 HOURS REQUIRED EARNED HOURS:",
+      "classification": "total_hours",
+      "items": [],
+      "raw_lines": [
+        "( 53.0 HOURS TAKEN)"
+      ]
+    },
+    {
+      "section_id": "hours_in_progress",
+      "section_title": "HOURS IN PROGRESS",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "( 14.0 HOURS TAKEN)"
+      ]
+    },
+    {
+      "section_id": "total_hours_earned_plus_in_progress",
+      "section_title": "TOTAL HOURS (EARNED PLUS IN-PROGRESS):",
+      "classification": "other",
+      "items": [
+        {
+          "id": "auto_item_44_0",
+          "header_raw": "(auto)",
+          "kind": "hours",
+          "earned": null,
+          "needed": 53.0,
+          "unit": "HOURS",
+          "select_from": [],
+          "combos": [],
+          "satisfied_by": [],
+          "needed_courses": [],
+          "status": "incomplete",
+          "raw_lines": []
+        }
+      ],
+      "raw_lines": [
+        "67.0 HOURS ADDED",
+        "NEEDS: 53.0 HOURS"
+      ]
+    },
+    {
+      "section_id": "2_000_gpa_required_on_all_courses_taken_on_this",
+      "section_title": "2.000 GPA REQUIRED ON ALL COURSES TAKEN ON THIS",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "campus_towards_degree_caution_gpa_hours_and",
+      "section_title": "CAMPUS TOWARDS DEGREE (CAUTION: GPA HOURS AND",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "total_hours_earned_toward_degree_completion_may_differ",
+      "section_title": "TOTAL HOURS EARNED TOWARD DEGREE COMPLETION MAY DIFFER)",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "UIUC Grade Point Average",
+        "31.0 GPA HOURS EARNED 120.36 POINTS 3.88 GPA"
+      ]
+    },
+    {
+      "section_id": "2_000_overall_gpa_required_includes_transfer_work",
+      "section_title": "2.000 OVERALL GPA REQUIRED (INCLUDES TRANSFER WORK)",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "caution_gpa_hours_and_total_hours_earned_toward_degree_completion_may_not_be_the_same",
+      "section_title": "(CAUTION: GPA HOURS AND TOTAL HOURS EARNED TOWARD DEGREE COMPLETION MAY NOT BE THE SAME)",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "Combined GPA",
+        "31.0 GPA HOURS EARNED 120.36 POINTS 3.88 GPA",
+        "Transfer GPA"
+      ]
+    },
+    {
+      "section_id": "0_0_gpa_hours_earned_0_00_points",
+      "section_title": "0.0 GPA HOURS EARNED 0.00 POINTS",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "summary_of_courses_taken_no_more_than_18_hours_of",
+      "section_title": "SUMMARY OF COURSES TAKEN- NO MORE THAN 18 HOURS OF",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "credit_no_credit_courses",
+      "section_title": "CREDIT/NO CREDIT COURSES",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "1_24_hours_of_electives_outside_of_las_may_be_used",
+      "section_title": "1) 24 HOURS OF ELECTIVES OUTSIDE OF LAS MAY BE USED.",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "1_0_hour_added_1_course_taken",
+      "section_title": "1.0 HOUR ADDED 1 COURSE TAKEN",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "FA24 TE 100 A 1.0 B-"
+      ]
+    },
+    {
+      "section_id": "2_other_courses_counting_toward_your_degree",
+      "section_title": "2) OTHER COURSES COUNTING TOWARD YOUR DEGREE",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "only_18_hours_of_independent_study_are_allowed",
+      "section_title": "ONLY 18 HOURS OF INDEPENDENT STUDY ARE ALLOWED",
+      "classification": "other",
+      "items": [],
+      "raw_lines": []
+    },
+    {
+      "section_id": "66_0_hours_added_20_courses_taken",
+      "section_title": "66.0 HOURS ADDED 20 COURSES TAKEN",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "SU24 MATH 2-- 3.0 CR ADVLEVEL: MATH 999",
+        "SU24 MATH 220 5.0 CR ADVLEVEL: MATH 999",
+        "SU24 MATH 225 2.0 CR >C ADVLEVEL: MATH 999",
+        "SU24 PHYS 211 4.0 CR ADVLEVEL: PHYS 999",
+        "SU24 PHYS 212 4.0 CR ADVLEVEL: PHYS 999",
+        "FA24 CS 124 AL2 3.0 A",
+        "FA24 ECON 102 BD! 3.0 A+",
+        "FA24 LAS 100 OL1 2.0 A",
+        "FA24 LAS 101 81 1.0 A+",
+        "FA24 MATH 231 AL4 3.0 A",
+        "FA24 RHET 105 1 4.0 PS",
+        "FA24 STAT 107 L2 4.0 A",
+        "SP25 CS 128 AL2 3.0 A",
+        "SP25 CS 173 AL4 3.0 A-",
+        "SP25 MATH 241 AL1 4.0 A-",
+        "SP25 STAT 207 BL1 4.0 A",
+        "FA25 CS 225 AL2 4.0 IP >I",
+        "FA25 MACS 100 ADH 3.0 IP >I",
+        "FA25 MUS 132 BL1 3.0 IP >I",
+        "FA25 STAT 400 YL1 4.0 IP >I"
+      ]
+    },
+    {
+      "section_id": "3_indirect_duplication_not_counting_towards_total_hours",
+      "section_title": "3) INDIRECT DUPLICATION NOT COUNTING TOWARDS TOTAL HOURS",
+      "classification": "other",
+      "items": [],
+      "raw_lines": [
+        "FA25 MATH 257 OL1 3.0 IP >C",
+        "contact your Admissions/Records Officer in Room",
+        "2002 Lincoln Hall, 702 S. Wright Street.",
+        "For requirements concerning your major, please",
+        "contact your Departmental Adviser.",
+        "************************ END OF ANALYSIS ************************",
+        "Copyright © 2018 CollegeSource, Inc. All Rights Reserved.",
+        "Privacy Policy"
+      ]
+    }
+  ],
+  "counters": {
+    "college_min_advanced_hours": 21,
+    "earned_hours": 52.0,
+    "uiuc_gpa": 3.88,
+    "uiuc_gpa_hours": 31.0,
+    "uiuc_gpa_points": 120.36,
+    "major_gpa": 3.9,
+    "major_gpa_hours": 24.0,
+    "major_gpa_points": 93.69,
+    "advanced_hours_in_progress": 4.0,
+    "advanced_hours_needed": 21.0
+  },
+  "warnings": []
+}

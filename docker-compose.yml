@@ -1,0 +1,66 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  etl:
+    image: python:3.11-slim
+    container_name: etl
+    depends_on:
+      mongo:
+        condition: service_healthy
+    working_dir: /app
+    volumes:
+      - ./etl:/app
+      - ./data:/data:ro
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/course_planner
+      DATA_CATALOG_DIR: /data/catalog
+      DATA_GPA_DIR: /data/gpa
+    command: >
+      sh -c "pip install -r requirements.txt &&
+             python seed.py"
+    restart: "no"
+
+  
+  backend:
+    build:
+      context: ./backend
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      PORT: 4000
+      MONGODB_URI: mongodb://mongo:27017/course_planner
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./audit-parser:/app/audit-parser:ro   # parser code visible to container
+      - ./data:/app/data                      # optional: uploads
+    restart: unless-stopped
+
+
+
+  mongo-express:
+    image: mongo-express:1.0.2-20
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_BASICAUTH: "false"
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+
+volumes:
+  mongo-data:
