@@ -12,7 +12,6 @@ A modern, student-friendly planner for building multi-semester course plans at U
 - [Architecture](#architecture)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-- [Environment Variables](#environment-variables)
 - [Data & Seeding](#data--seeding)
 - [API Overview](#api-overview)
 - [Theming](#theming)
@@ -152,21 +151,6 @@ npm run dev    # http://localhost:3000
 docker compose up -d
 # check logs
 docker compose logs -f backend
-```
-
----
-
-## Environment Variables
-
-### `backend/.env`
-```
-PORT=4000
-MONGODB_URI=mongodb://localhost:27017/course_planner
-```
-
-### `app/web/.env.local`
-```
-NEXT_PUBLIC_API_BASE=http://localhost:4000
 ```
 
 ---
