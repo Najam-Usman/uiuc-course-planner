@@ -43,7 +43,7 @@ A quick visual overview of the **UIUC Course Planner** web app — designed for 
 
 | 📊 Example Plan | 🎓 Degree Progress |
 |-----------------|--------------------|
-| ![Example Plan](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-example-plan>) | ![Degree Progress](https://github.com/Najam-Usman/uiuc-course-planner/issues/6#issue-3511806549) |
+| ![Example Plan](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-example-plan>) | ![Degree Progress](https://private-user-images.githubusercontent.com/179553711/500698357-1d3e501f-6338-43aa-a8c1-e9d78f5f828c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAzOTk0MjEsIm5iZiI6MTc2MDM5OTEyMSwicGF0aCI6Ii8xNzk1NTM3MTEvNTAwNjk4MzU3LTFkM2U1MDFmLTYzMzgtNDNhYS1hOGMxLWU5ZDc4ZjVmODI4Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxM1QyMzQ1MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03ODg2NDU0MWU2YTY4MzU1MTc4ZGI2NTA3YWEwYzlhNzQ5OTQ3ZTY3ZDgxOTkwZmQ0ZmVjODM5ZmVjNWYyMjVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Xwoz2ZK_Ot2jiPOMAiPWzCGAaOuAjHEvYu9hUfQgHIg) |
 
 ---
 
