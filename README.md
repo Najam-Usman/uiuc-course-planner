@@ -43,7 +43,7 @@ A quick visual overview of the **UIUC Course Planner** web app — designed for 
 
 | 📊 Example Plan | 🎓 Degree Progress |
 |-----------------|--------------------|
-| ![Example Plan](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-example-plan>) | ![Degree Progress](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-degree-progress>) |
+| ![Example Plan](https://github.com/Najam-Usman/uiuc-course-planner/assets/<hash-example-plan>) | ![Degree Progress](https://github.com/Najam-Usman/uiuc-course-planner/issues/6#issue-3511806549) |
 
 ---
 
