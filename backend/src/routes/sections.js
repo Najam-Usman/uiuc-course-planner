@@ -3,15 +3,7 @@ import Section from "../models/Section.js";
 
 const router = Router();
 
-/**
- * GET /sections/:courseId
- * Optional query:
- *   - term=2025-fa
- *   - instructor=substring (case-insensitive)
- *
- * Example:
- *   /sections/CS%20225?term=2025-fa
- */
+
 router.get("/:courseId", async(req, res) => {
     const {courseId} = req.params;
     const {term, instructor} = req.query;
@@ -30,10 +22,7 @@ router.get("/:courseId", async(req, res) => {
 });
 
 
-/**
- * GET /sections/:courseId/terms
- * Returns distinct term codes for which this course has sections.
- */
+
 router.get("/:courseId/terms", async (req, res) => {
     const {courseId} = req.params;
     const terms = await Section.distinct("term", {courseId});
@@ -42,10 +31,6 @@ router.get("/:courseId/terms", async (req, res) => {
 
 
 
-/**
- * GET /sections/:courseId/summary?term=2025-fa
- * Groups sections by section code for a quick overview in the UI.
- */
 router.get("/:courseId/summary", async (req, res) => {
   const { courseId } = req.params;
   const term = String(req.query.term || "").trim();
@@ -60,7 +45,7 @@ router.get("/:courseId/summary", async (req, res) => {
         _id: { section: "$section", term: "$term" },
         crns: { $addToSet: "$crn" },
         instructors: { $addToSet: "$instructor" },
-        meetings: { $push: "$meetings" } // array of arrays; flatten client-side if you want
+        meetings: { $push: "$meetings" } 
       }
     },
     {

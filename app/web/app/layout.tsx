@@ -8,7 +8,6 @@ export const metadata = {
   description: "Plan semesters with ease.",
 };
 
-// no-flash theme bootstrap
 const bootstrap = `
 (function() {
   const k='uiuc-theme';
@@ -29,14 +28,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="sticky top-0 z-40 border-b bg-card/85 backdrop-blur">
           <div className="mx-auto max-w-6xl px-4 py-3 flex items-center gap-3">
-            {/* Clickable logo to go HOME */}
             <Link href="/" className="flex items-center gap-2">
               <div className="h-8 w-8 rounded-xl bg-primary shadow-[var(--shadow-glow)]" />
               <span className="font-semibold">UIUC Course Planner</span>
             </Link>
 
             <nav className="ml-auto flex items-center gap-2">
-              {/* Persistent navigation */}
               <ActiveLink href="/" exact>Home</ActiveLink>
               <ActiveLink href="/progress">Progress</ActiveLink>
               <ActiveLink href="/plans">Plans</ActiveLink>

@@ -1,8 +1,7 @@
-// web/lib/plan.ts
 import { Plan } from "@/types";
 
 export const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:4000";
-export const USER_ID = "najam"; // later: read from auth
+export const USER_ID = "najam"; 
 
 async function j<T>(res: Response) {
   if (!res.ok) throw new Error(await res.text());
@@ -42,7 +41,6 @@ export async function removeFromPlan(term: string, courseId: string, sectionId?:
   return j<any>(res);
 }
 
-// Multi-plan endpoints
 export async function listPlans() {
   const res = await fetch(`${API_BASE}/plans?userId=${encodeURIComponent(USER_ID)}`, { cache: "no-store" });
   if (res.status === 404) return [];
@@ -111,7 +109,6 @@ export async function renameSemester(id: string, oldTerm: string, newTerm: strin
   return j<Plan>(res);
 }
 
-// NEW: delete a plan
 export async function deletePlan(id: string) {
   const res = await fetch(`${API_BASE}/plans/${id}`, { method: "DELETE" });
   if (res.status === 404) return { ok: false };

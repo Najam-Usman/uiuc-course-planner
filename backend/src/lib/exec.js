@@ -1,8 +1,6 @@
 const { spawn } = require("child_process");
 
-/**
- * Promise wrapper around child_process.spawn
- */
+
 function spawnPromise(cmd, args = [], options = {}) {
   return new Promise((resolve, reject) => {
     const child = spawn(cmd, args, {

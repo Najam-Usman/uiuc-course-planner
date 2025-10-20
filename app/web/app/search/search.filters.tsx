@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 
-const SUBJECTS = ["", "CS", "STAT", "MATH", "ECE", "IS", "PHYS"]; // expand later
+const SUBJECTS = ["", "CS", "STAT", "MATH", "ECE", "IS", "PHYS"]; 
 const LEVELS = ["", "100", "200", "300", "400"];
 
 export default function SearchFilters({ initial }: { initial: { q?: string; subject?: string; level?: string } }) {

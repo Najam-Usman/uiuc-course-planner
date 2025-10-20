@@ -1,4 +1,3 @@
-// Simple Mongo helper using the native driver
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/course_planner";

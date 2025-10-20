@@ -4,15 +4,12 @@ import DeletePlanButton from "@/components/site/DeletePlanButton.client";
 import RenamePlanInline from "@/components/site/RenamePlanInline.client";
 
 
-{/* First-run hint */}
 <FirstRunHint />
 
-// …
 function FirstRunHint() {
   if (typeof window === "undefined") return null;
   const seen = typeof window !== "undefined" && localStorage.getItem("uiuc-first-plans");
   if (seen) return null;
-  // mark seen
   if (typeof window !== "undefined") localStorage.setItem("uiuc-first-plans", "1");
   return (
     <div className="card p-4 surface mb-4">
@@ -43,7 +40,6 @@ export default async function PlansPage() {
                   {p.title.slice(0, 1).toUpperCase()}
                 </span>
                 <div>
-                  {/* Single title with edit icon; title itself links to the plan */}
                   <RenamePlanInline id={p._id} initial={p.title} linkHref={`/plan/${p._id}`} />
                   <div className="text-xs text-muted-foreground mt-1">
                     {p.semesters?.length ?? 0} semester{(p.semesters?.length ?? 0) === 1 ? "" : "s"}

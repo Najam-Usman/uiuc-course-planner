@@ -24,7 +24,7 @@ export type AuditResponse = {
 export type AuditDoc = {
   _id: string; userId: string; meta: AuditMeta; counters: AuditCounters;
   courses: ParsedCourse[]; stats: AuditResponse["stats"];
-  needs?: RequirementNeed[];            // <-- NEW
+  needs?: RequirementNeed[];
   createdAt: string;
 };
 
@@ -50,7 +50,6 @@ export async function fetchLatestAudit(): Promise<AuditDoc | null> {
   return (await r.json()) as AuditDoc;
 }
 
-/* prereq helpers (unchanged) */
 export const courseKey = (s: string, n: string | number) => `${String(s).trim().toUpperCase()} ${String(n).trim()}`;
 export type SatisfiedSets = { satisfied: Set<string>; completed: Set<string>; inProgress: Set<string>; };
 export function buildSatisfiedSets(auditLike: { courses?: ParsedCourse[] }): SatisfiedSets {

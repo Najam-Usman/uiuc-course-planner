@@ -1,5 +1,3 @@
-// web/app/c/[courseId]/page.tsx
-
 import { api } from "@/lib/api";
 import type { Course } from "@/types";
 import AddToPlan from "@/components/site/AddToPlan";
@@ -8,7 +6,6 @@ async function getCourse(id: string): Promise<Course> {
   try {
     return await api<Course>(`/courses/${encodeURIComponent(id)}`);
   } catch {
-    // Fallback so the page still renders if backend is down
     return {
       courseId: id,
       title: "Sample Course",
@@ -32,7 +29,6 @@ export default async function CoursePage({
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-      {/* Left: course content */}
       <section className="space-y-4">
         <h1 className="text-2xl font-bold">
           {course.courseId}: {course.title}
@@ -69,7 +65,6 @@ export default async function CoursePage({
         )}
       </section>
 
-      {/* Right: actions sidebar */}
       <aside className="space-y-4">
         <AddToPlan
           courseId={course.courseId}

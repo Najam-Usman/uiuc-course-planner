@@ -5,18 +5,6 @@ import { listPlans, getPlanById, addCourse } from "@/lib/plan";
 import { api } from "@/lib/api";
 import type { Plan } from "@/types";
 
-/**
- * AddToPlan
- * - Renders plan and term selects
- * - Checks 18-credit cap unless plan.overload === true
- * - Calls addCourse(planId, term, courseId, credits)
- *
- * Props:
- * - courseId: string           (required)
- * - courseCredits?: number     (optional; used for the credit cap & stored on the entry)
- * - onAdded?: () => void       (optional; called after a successful add)
- * - className?: string
- */
 export default function AddToPlan({
   courseId,
   courseCredits,
@@ -32,10 +20,9 @@ export default function AddToPlan({
   const [planId, setPlanId] = useState<string>("");
   const [terms, setTerms] = useState<string[]>([]);
   const [term, setTerm] = useState<string>("");
-  const [message, setMessage] = useState<string>(""); // lightweight feedback
+  const [message, setMessage] = useState<string>(""); 
   const [isPending, startTransition] = useTransition();
 
-  // Load user's plans
   useEffect(() => {
     (async () => {
       try {
@@ -46,10 +33,8 @@ export default function AddToPlan({
         setMessage("Failed to load plans.");
       }
     })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Load available terms for this course
   useEffect(() => {
     (async () => {
       try {
@@ -60,13 +45,11 @@ export default function AddToPlan({
         setTerms(ts);
         if (ts.length && !term) setTerm(ts[0]);
       } catch {
-        // fallback if route not available
         const fallback = ["2025-fa", "2026-sp", "2026-fa"];
         setTerms(fallback);
         if (!term) setTerm(fallback[0]);
       }
     })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseId]);
 
   const selectedPlan = useMemo(
@@ -87,7 +70,6 @@ export default function AddToPlan({
 
     startTransition(async () => {
       try {
-        // Enforce 18-credit cap when overload=false
         const freshPlan = await getPlanById(planId);
         if (!freshPlan) {
           setMessage("Plan not found on server.");
@@ -125,7 +107,6 @@ export default function AddToPlan({
       <div className="text-sm font-medium">Add to Plan</div>
 
       <div className="flex flex-wrap items-center gap-2">
-        {/* Plan selector */}
         <select
           className="w-[220px] rounded-md border px-3 py-2 text-sm"
           value={planId}
@@ -139,7 +120,6 @@ export default function AddToPlan({
           ))}
         </select>
 
-        {/* Term selector */}
         <select
           className="w-[160px] rounded-md border px-3 py-2 text-sm"
           value={term}
@@ -153,7 +133,6 @@ export default function AddToPlan({
           {terms.length === 0 && <option value="">No terms</option>}
         </select>
 
-        {/* Credits (read-only display if provided) */}
         {typeof courseCredits === "number" && (
           <span className="text-xs opacity-70">{courseCredits} cr</span>
         )}

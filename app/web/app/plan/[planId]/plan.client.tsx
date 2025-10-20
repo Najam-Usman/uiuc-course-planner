@@ -1,4 +1,3 @@
-// web/app/plan/[planId]/plan.client.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -18,7 +17,6 @@ export default function PlanClient({
   initialPlan: Plan | null;
   planId: string;
 }) {
-  // Local, live copy of the plan for optimistic UI
   const [plan, setPlan] = useState<Plan | null>(initialPlan);
   const [addingTerm, setAddingTerm] = useState("");
 
@@ -30,12 +28,10 @@ export default function PlanClient({
 
   const cap = 18;
 
-  // Compute credits for a term
   function sumCredits(courses: PlanCourse[]) {
     return courses.reduce((a, c) => a + (c.credits ?? 0), 0);
   }
 
-  // Optimistically add a course to a term
   async function onAddCourse(term: string, course: PlanCourse) {
     setPlan((prev) => {
       if (!prev) return prev;
@@ -58,7 +54,6 @@ export default function PlanClient({
     });
   }
 
-  // Optimistically remove a course from a term
   async function onRemoveCourse(term: string, courseId: string) {
     setPlan((prev) => {
       if (!prev) return prev;
@@ -78,19 +73,16 @@ export default function PlanClient({
     }
   }
 
-  // Toggle overload (functional updater to avoid union widening)
   async function onToggleOverload(val: boolean) {
     setPlan((prev) => (prev ? { ...prev, overload: val } as Plan : prev));
     try {
       await setOverload(planId, val);
     } catch {
-      // revert on error
       setPlan((prev) => (prev ? { ...prev, overload: !val } as Plan : prev));
       alert("Failed to update overload setting.");
     }
   }
 
-  // Add a semester (functional updater)
   async function onAddSemester() {
     const term = addingTerm.trim();
     if (!term) return;
@@ -152,7 +144,6 @@ export default function PlanClient({
                     planId={plan._id}
                     term={s.term}
                     onSaved={(next) => {
-                      // local optimistic rename (optional)
                       setPlan((p) => {
                         if (!p) return p;
                         const copy = structuredClone(p);
@@ -162,7 +153,6 @@ export default function PlanClient({
                       });
                     }}
                   />
-                  {/* keep your Add course / credit totals on the right */}
                 </div>
 
                 <div className={`text-sm ${over ? "text-red-600" : "text-gray-600"}`}>
@@ -171,7 +161,6 @@ export default function PlanClient({
               </div>
 
  
-              {/* Picker opens in a modal so other cards don't jump */}
               <CoursePicker
                 planId={planId}
                 term={s.term}

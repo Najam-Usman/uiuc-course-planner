@@ -1,9 +1,9 @@
 export type RequirementNeed = {
   id: string;
-  title: string;        // friendly section title
-  needText: string;     // e.g., "NEEDS: 1 COURSE"
-  searchPath?: string;  // link to search with sensible defaults
-  options?: string[];   // course codes (e.g., ["CS 233","CS 341"])
+  title: string;        
+  needText: string;     
+  searchPath?: string;  
+  options?: string[];   
 };
 
 export type ActionableNeeds = {
@@ -11,7 +11,6 @@ export type ActionableNeeds = {
   courses: RequirementNeed[];
 };
 
-/* ---------------- helpers ---------------- */
 
 const BAD_TITLES = [
   "TOTAL HOURS",
@@ -59,7 +58,6 @@ function isGenEdCategoryTitle(title: string) {
 }
 
 function isGenericGenEd(title: string) {
-  // Cards like "NEEDS: 1 COURSE GENERAL EDUCATION" (no category)
   const T = title.toUpperCase();
   return T.includes("GENERAL EDUCATION") &&
          !/HUMANITIES|SOCIAL|NATURAL|CULTURAL|COMPOSITION|QUANTITATIVE|WESTERN|NON-WESTERN|U\.S\./i.test(title);
@@ -70,11 +68,9 @@ function extractNeedText(titlePlusLines: string) {
   return m ? `NEEDS: ${m[1].trim()}` : null;
 }
 
-/** SUBJECT #### codes (ignore placeholders and terms like FA24/999). */
 function extractCourseCodes(text: string): string[] {
   const out = new Set<string>();
 
-  // "CS 233, 341, 374"
   const pA = /([A-Z]{2,5})\s+((?:\d{3})(?:\s*[,/]\s*\d{3})+)/g;
   for (const match of text.matchAll(pA)) {
     const subj = match[1].toUpperCase();
@@ -85,7 +81,6 @@ function extractCourseCodes(text: string): string[] {
     });
   }
 
-  // Standalone "SUBJ 233"
   const pB = /([A-Z]{2,5})\s+(\d{3})/g;
   for (const match of text.matchAll(pB)) {
     const subj = match[1].toUpperCase();
@@ -96,7 +91,6 @@ function extractCourseCodes(text: string): string[] {
   return Array.from(out);
 }
 
-/** Friendly label for major groups. */
 function friendlyCourseGroupTitle(title: string, blob: string): string {
   const t = (title + " " + blob).toUpperCase();
 
@@ -106,7 +100,6 @@ function friendlyCourseGroupTitle(title: string, blob: string): string {
   if (/STATISTICAL APPLICATION ELECTIVE/i.test(t)) return "Statistical Application Elective";
   if (/COMPUTATIONAL APPLICATION ELECTIVE/i.test(t)) return "Computational Application Elective";
 
-  // Heuristics by option set:
   if (/SELECT FROM:\s*CS\s+222.*357.*374.*421/i.test(t)) return "CS Core Options";
   if (/SELECT FROM:\s*STAT\s+410.*425.*426/i.test(t)) return "Statistics Core Electives";
   if (/SELECT FROM:\s*CS\s+410.*482/i.test(t)) return "Upper-level CS Elective";
@@ -114,11 +107,9 @@ function friendlyCourseGroupTitle(title: string, blob: string): string {
   return stripNumbering(title).replace(/^NEEDS?:.*?\bSELECT FROM:\s*/i, "").trim() || "Major requirement";
 }
 
-/** Build a search link. */
 function buildSearchPath(title: string, blob: string, options?: string[]) {
   const t = (title + " " + blob).toUpperCase();
 
-  // Gen-Eds
   if (t.includes("ADVANCED COMPOSITION")) return "/search?gened=ACP";
   if (t.includes("COMPOSITION I")) return "/search?gened=COMP1";
   if (t.includes("QUANTITATIVE REASONING II") || t.includes("QR2")) return "/search?gened=QR2";
@@ -130,7 +121,6 @@ function buildSearchPath(title: string, blob: string, options?: string[]) {
   if (t.includes("NON-WESTERN")) return "/search?gened=NW";
   if (t.includes("U.S. MINORITY")) return "/search?gened=US";
 
-  // Major picks → first subject
   if (options && options.length) {
     const subj = options[0].split(" ")[0];
     return `/search?subject=${encodeURIComponent(subj)}`;
@@ -140,13 +130,8 @@ function buildSearchPath(title: string, blob: string, options?: string[]) {
   return undefined;
 }
 
-/* -------------- main extractor -------------- */
 
-/**
- * Extract actionable needs.
- * @param raw audit.raw
- * @param taken set of "SUBJ NNN" already completed or in-progress (to filter options)
- */
+
 export function extractActionableNeeds(raw: any, taken?: Set<string>): ActionableNeeds {
   const result: ActionableNeeds = { geneds: [], courses: [] };
   const seen = new Set<string>();
@@ -164,11 +149,10 @@ export function extractActionableNeeds(raw: any, taken?: Set<string>): Actionabl
     const allText = (rawTitle + " " + blob).trim();
 
     const needText = extractNeedText(allText);
-    if (!needText) continue;                   // only unmet
-    if (hasSatisfiedHints(allText)) continue;  // skip “COURSE TAKEN”/earned
+    if (!needText) continue;                   
+    if (hasSatisfiedHints(allText)) continue;  
     if (/SUB-?GROUP/i.test(rawTitle)) continue;
 
-    // -------- Gen-Ed categories only (skip generic “General Education”) ----------
     if (isGenEdCategoryTitle(rawTitle) && !isGenericGenEd(rawTitle)) {
       const title = stripNumbering(rawTitle);
       const key = `GENED|${title}|${needText}`;
@@ -183,7 +167,6 @@ export function extractActionableNeeds(raw: any, taken?: Set<string>): Actionabl
       continue;
     }
 
-    // -------- Major course picks ----------
     const selectable = /SELECT FROM:|ONE OF THE FOLLOWING COMBINATIONS/i.test(allText);
     const codes = extractCourseCodes(allText).filter(c => !(taken?.has(c)));
 
@@ -196,7 +179,7 @@ export function extractActionableNeeds(raw: any, taken?: Set<string>): Actionabl
       result.courses.push({
         id: `courses_${i}`,
         title,
-        needText: needText.replace(/\s+5\)\s*/,'').trim(), // clean odd inserts like "NEEDS: 3 COURSES 5)"
+        needText: needText.replace(/\s+5\)\s*/,'').trim(), 
         options: codes.length ? codes : undefined,
         searchPath: buildSearchPath(title, blob, codes),
       });

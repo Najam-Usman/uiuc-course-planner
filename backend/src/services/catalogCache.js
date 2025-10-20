@@ -1,16 +1,8 @@
-// src/services/catalogCache.js
 import axios from "axios";
 import * as cheerio from "cheerio";
 import fs from "fs";
 import path from "path";
 
-/**
- * Robust catalog fetch strategy:
- * 1) Scrape Majors index (A–Z sitemap blocks).
- * 2) If too few majors found, fetch each college's landing page and harvest program links.
- * 3) Derive colleges from majors' URLs (slug → pretty name).
- * 4) If still too few colleges, fall back to a known list.
- */
 
 const FALLBACK_DIR = path.join(process.cwd(), "src", "data");
 const MAJORS_FALLBACK = path.join(FALLBACK_DIR, "majors.fallback.json");
@@ -18,16 +10,15 @@ const COLLEGES_FALLBACK = path.join(FALLBACK_DIR, "colleges.fallback.json");
 
 let cache = {
   loadedAt: 0,
-  majors: /** @type {Array<{name:string, degree?:string, collegeName?:string, href?:string}>} */ ([]),
-  colleges: /** @type {Array<string>} */ ([]),
+  majors: ([]),
+  colleges: ([]),
 };
 
-const TTL_MS = 24 * 60 * 60 * 1000; // 24h
+const TTL_MS = 24 * 60 * 60 * 1000; 
 
 const BASE = "https://catalog.illinois.edu";
 const MAJORS_URL = `${BASE}/undergraduate/majors/`;
 
-// Known college slugs under /undergraduate/<slug>/
 const COLLEGE_SLUG_MAP = {
   engineering: "Grainger College of Engineering",
   las: "College of Liberal Arts & Sciences",
@@ -66,7 +57,7 @@ function extractDegree(txt) {
 function inferCollegeFromHref(href) {
   try {
     const u = new URL(href.startsWith("http") ? href : `${BASE}${href}`);
-    const parts = u.pathname.split("/").filter(Boolean); // ['undergraduate','<slug>',...]
+    const parts = u.pathname.split("/").filter(Boolean); 
     const idx = parts.indexOf("undergraduate");
     const slug = idx >= 0 ? (parts[idx + 1] || "").toLowerCase() : "";
     return COLLEGE_SLUG_MAP[slug];
@@ -92,26 +83,24 @@ async function fetchText(url) {
         "Connection": "keep-alive",
         "Upgrade-Insecure-Requests": "1",
       },
-      validateStatus: () => true, // treat non-2xx as handled
+      validateStatus: () => true, 
       decompress: true,
     });
     if (status >= 200 && status < 300 && typeof data === "string" && data.length > 2000) {
       return String(data);
     }
-    return null; // force fallback/merge path
+    return null; 
   } catch {
     return null;
   }
 }
 
 
-/** harvest <a> elements that look like program pages */
 function collectProgramAnchors($) {
   const anchors = [];
-  // Prefer typical sitemap blocks if present
   const roots = [
-    ".az_sitemap",        // common class name for A–Z list
-    "#atoz",              // sometimes used
+    ".az_sitemap",        
+    "#atoz",              
     "#content",
     "main",
     "#main",
@@ -134,7 +123,7 @@ function collectProgramAnchors($) {
 
       anchors.push({ href, text });
     });
-    if (anchors.length > 50) break; // likely found the sitemap block
+    if (anchors.length > 50) break; 
   }
   return anchors;
 }
@@ -142,7 +131,6 @@ function collectProgramAnchors($) {
 function filterToMajors(anchors) {
   return anchors
     .filter(({ href, text }) => {
-      // drop obvious noise
       const lower = text.toLowerCase();
       if (
         /back to top|catalog|policy|admission|minor|certificate|curriculum|requirements|pdf|download/i.test(
@@ -150,14 +138,12 @@ function filterToMajors(anchors) {
         ) ||
         /^see /i.test(lower) ||
         /^\(see/i.test(lower) ||
-        /@/.test(text) // email-like junk
+        /@/.test(text) 
       ) {
         return false;
       }
-      // basic sanity
       if (text.length < 3 || text.length > 200) return false;
 
-      // must link to /undergraduate/<slug>/...
       if (!/\/undergraduate\/[^/]+\/.+/i.test(href)) return false;
 
       return true;
@@ -181,7 +167,6 @@ async function scrapeMajorsIndex() {
   const anchors = collectProgramAnchors($);
   const majors = filterToMajors(anchors);
 
-  // dedupe by program name (case-insensitive)
   const seen = new Set();
   const unique = majors.filter((m) => {
     const k = m.name.toLowerCase();
@@ -194,9 +179,8 @@ async function scrapeMajorsIndex() {
 }
 
 async function scrapeCollegePagesIfNeeded(existingMajors) {
-  if (existingMajors.length >= 80) return existingMajors; // good enough
+  if (existingMajors.length >= 80) return existingMajors; 
 
-  // fetch each college landing and harvest additional programs
   const slugs = Object.keys(COLLEGE_SLUG_MAP);
   const results = await Promise.all(
     slugs.map(async (slug) => {
@@ -211,7 +195,6 @@ async function scrapeCollegePagesIfNeeded(existingMajors) {
   );
 
   const merged = [...existingMajors, ...results.flat()];
-  // dedupe by name
   const seen = new Set();
   const unique = merged.filter((m) => {
     const k = m.name.toLowerCase();
@@ -230,13 +213,11 @@ function deriveColleges(majors, collegesFallback) {
       .filter((c) => c && /(college|school|division)/i.test(c))
   );
   let arr = Array.from(set).sort((a, b) => a.localeCompare(b));
-  if (arr.length >= 8) return arr; // looks healthy
+  if (arr.length >= 8) return arr; 
 
-  // not enough: try bundled fallback
   if (Array.isArray(collegesFallback) && collegesFallback.length >= 8) {
     return collegesFallback;
   }
-  // last resort: default list
   return DEFAULT_COLLEGES;
 }
 
@@ -245,7 +226,6 @@ export async function ensureCatalog(force = false) {
     !force && Date.now() - cache.loadedAt < TTL_MS && cache.majors.length && cache.colleges.length;
   if (fresh) return cache;
 
-  // start with bundled fallbacks
   let majors = [];
   try {
     if (fs.existsSync(MAJORS_FALLBACK)) {
@@ -259,9 +239,7 @@ export async function ensureCatalog(force = false) {
     }
   } catch {}
 
-  // 1) majors index
   let scraped = await scrapeMajorsIndex();
-  // 2) per-college harvest if index was thin
   scraped = await scrapeCollegePagesIfNeeded(scraped);
 
   if (scraped.length >= 30) {

@@ -218,7 +218,6 @@ Create **or replace** a user’s plan.
 
 **200**
 ```json
-{ /* full plan document (same shape as GET /plans/:userId) */ }
 ```
 
 **400**
@@ -238,7 +237,6 @@ Add a course to a term (creates the plan and/or term if missing).
 
 **200**
 ```json
-{ /* updated plan */ }
 ```
 
 **400**
@@ -258,7 +256,6 @@ Remove a course from a term. If `sectionId` supplied, removes that pairing; othe
 
 **200**
 ```json
-{ /* updated plan */ }
 ```
 
 **404**

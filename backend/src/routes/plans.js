@@ -1,10 +1,8 @@
-// backend/src/routes/plans.js
 import { Router } from "express";
 import Plan from "../models/Plans.js";
 
 const router = Router();
 
-/** LIST plans by userId */
 router.get("/", async (req, res) => {
   const { userId } = req.query;
   if (!userId) return res.status(400).json({ error: "userId required" });
@@ -13,7 +11,6 @@ router.get("/", async (req, res) => {
   res.json(plans);
 });
 
-/** GET one plan */
 router.get("/:id", async (req, res) => {
   try {
     const plan = await Plan.findById(req.params.id).lean();
@@ -24,7 +21,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-/** CREATE plan */
 router.post("/", async (req, res) => {
   const { userId, title = "My Plan" } = req.body;
   if (!userId) return res.status(400).json({ error: "userId required" });
@@ -32,13 +28,7 @@ router.post("/", async (req, res) => {
   res.json(plan);
 });
 
-/**
- * PATCH plan ops:
- *  - rename:     { op:"rename", title }
- *  - overload:   { op:"overload", overload }
- *  - addTerm:    { op:"addTerm", term }
- *  - renameTerm: { op:"renameTerm", oldTerm, newTerm }
- */
+
 router.patch("/:id", async (req, res) => {
   const { op } = req.body;
   const plan = await Plan.findById(req.params.id);
@@ -59,7 +49,6 @@ router.patch("/:id", async (req, res) => {
     if (!oldTerm || !newTerm) return res.status(400).json({ error: "oldTerm and newTerm required" });
     const s = plan.semesters.find((x) => x.term === oldTerm);
     if (!s) return res.status(404).json({ error: "semester not found" });
-    // avoid duplicate term labels
     if (plan.semesters.some((x) => x.term === newTerm)) {
       return res.status(409).json({ error: "target term already exists" });
     }
@@ -72,7 +61,6 @@ router.patch("/:id", async (req, res) => {
   res.json(plan);
 });
 
-/** ADD course */
 router.patch("/:id/add", async (req, res) => {
   const { term, courseId, sectionId = null, credits = 0 } = req.body;
   if (!term || !courseId) return res.status(400).json({ error: "term and courseId required" });
@@ -89,7 +77,6 @@ router.patch("/:id/add", async (req, res) => {
   res.json(plan);
 });
 
-/** REMOVE course */
 router.patch("/:id/remove", async (req, res) => {
   const { term, courseId } = req.body;
   if (!term || !courseId) return res.status(400).json({ error: "term and courseId required" });
@@ -105,7 +92,6 @@ router.patch("/:id/remove", async (req, res) => {
   res.json(plan);
 });
 
-/** DELETE plan */
 router.delete("/:id", async (req, res) => {
   try {
     const result = await Plan.findByIdAndDelete(req.params.id);

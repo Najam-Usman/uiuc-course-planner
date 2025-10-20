@@ -1,9 +1,3 @@
-// web/app/search/page.tsx
-// Subject-first search with live autocomplete.
-// Step 1: pick a subject via SubjectSearch (Google-like suggestions).
-// Step 2: list courses in that subject with within-subject filtering (sq) + level.
-// Cards show Credits and Avg GPA.
-
 import SubjectSearch from "@/components/site/SubjectSearch.client";
 import { api } from "@/lib/api";
 import type { Course } from "@/types";
@@ -27,7 +21,6 @@ async function getCoursesBySubject(
 }
 
 export default async function SearchPage({
-  // In this Next version, searchParams is a Promise
   searchParams,
 }: {
   searchParams: Promise<{
@@ -45,7 +38,6 @@ export default async function SearchPage({
       ? sp.subject[0]
       : "";
 
-  // STEP 1: Subject selection with live suggestions
   if (!subject) {
     return (
       <div className="space-y-4">
@@ -58,7 +50,7 @@ export default async function SearchPage({
     );
   }
 
-  // STEP 2: Courses within subject
+  
   const sq =
     typeof sp.sq === "string" ? sp.sq : Array.isArray(sp.sq) ? sp.sq[0] : "";
   const level =

@@ -1,4 +1,3 @@
-// web/app/onboarding/page.tsx
 "use client";
 
 import { useEffect, useMemo, useState, useTransition } from "react";
@@ -34,7 +33,6 @@ export default function Onboarding() {
   const router = useRouter();
   const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:4000";
 
-  // theme + profile hydration
   useEffect(() => {
     try {
       const raw = localStorage.getItem(PROFILE_KEY);
@@ -52,14 +50,12 @@ export default function Onboarding() {
   function next() { setStep((s) => Math.min(3, s + 1)); }
   function back() { setStep((s) => Math.max(1, s - 1)); }
 
-  // Colleges & Majors — fetched from backend
   const [colleges, setColleges] = useState<string[]>([]);
   const [majors, setMajors] = useState<{ name: string; degree?: string; collegeName?: string }[]>([]);
   const [majorQuery, setMajorQuery] = useState("");
 
   useEffect(() => {
     fetch(`${API_BASE}/meta/colleges`).then(r => r.ok ? r.json() : []).then(setColleges).catch(() => setColleges([]));
-    // prefetch majors so search is instant
     fetch(`${API_BASE}/meta/majors`).then(r => r.ok ? r.json() : []).then(setMajors).catch(() => setMajors([]));
   }, [API_BASE]);
 
@@ -73,7 +69,6 @@ export default function Onboarding() {
       const q = majorQuery.toLowerCase();
       rows = rows.filter(m => m.name.toLowerCase().includes(q));
     }
-    // De-dup and sort
     const seen = new Set<string>();
     rows = rows.filter(m => {
       const k = m.name.toLowerCase();
@@ -202,7 +197,6 @@ export default function Onboarding() {
               </div>
             </div>
 
-            {/* Major search */}
             <div className="mt-2">
               <label className="text-xs text-muted-foreground">Major</label>
               {!profile.college ? (

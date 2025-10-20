@@ -39,7 +39,6 @@ export default function UploadAudit({ onSuccess, className }: Props) {
       setPreview(null);
     } finally {
       setBusy(false);
-      // Reset input so the same file can be selected again
       if (inputRef.current) inputRef.current.value = "";
     }
   }

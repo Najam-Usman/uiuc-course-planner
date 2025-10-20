@@ -14,7 +14,6 @@ export default async function ProgressPage() {
     const r = await fetch(`${base}/api/audits/latest`, { cache: "no-store" });
     if (r.ok) latest = (await r.json()) as AuditDoc;
   } catch {
-    // ignore; client will try on mount
   }
 
   return (

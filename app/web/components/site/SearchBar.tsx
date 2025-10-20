@@ -12,7 +12,6 @@ export default function SearchBar() {
 
   useEffect(() => {
     setQ(sp.get("q") ?? "CS 225");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sp]);
 
   function onSubmit(e: React.FormEvent) {

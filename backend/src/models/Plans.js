@@ -19,10 +19,9 @@ const SemesterSchema = new mongoose.Schema(
 
 const PlanSchema = new mongoose.Schema(
   {
-    // ❗ Allow multiple plans per user — remove unique:true
     userId: { type: String, index: true, required: true },
     title: { type: String, default: "My Plan" },
-    overload: { type: Boolean, default: false }, // allow > 18 when true
+    overload: { type: Boolean, default: false }, 
     semesters: { type: [SemesterSchema], default: [] },
   },
   { timestamps: true }

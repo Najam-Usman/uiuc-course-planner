@@ -30,7 +30,6 @@ export default function CoursePicker({
 }) {
   const [open, setOpen] = useState(false);
 
-  // subject autocomplete
   const [allSubjects, setAllSubjects] = useState<string[]>([]);
   const [subjQuery, setSubjQuery] = useState("");
   const [subject, setSubject] = useState<string>("");
@@ -39,7 +38,6 @@ export default function CoursePicker({
   const subjBoxRef = useRef<HTMLDivElement | null>(null);
   const [loadingSubjects, setLoadingSubjects] = useState(false);
 
-  // within-subject
   const [sq, setSq] = useState("");
   const [level, setLevel] = useState("");
   const [rows, setRows] = useState<CourseRow[]>([]);
@@ -49,7 +47,6 @@ export default function CoursePicker({
   const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:4000";
   const CAP = 18;
 
-  // fetch subjects once modal opens
   useEffect(() => {
     if (!open) return;
     let alive = true;
@@ -72,7 +69,6 @@ export default function CoursePicker({
     };
   }, [API_BASE, open]);
 
-  // prefix-first subject filtering
   const filteredSubjects = useMemo(() => {
     const q = subjQuery.trim().toUpperCase();
     if (!q) return allSubjects.slice(0, 50);
@@ -107,7 +103,6 @@ export default function CoursePicker({
   useEffect(() => {
     if (!open || !subject) return;
     fetchCoursesForSubject(subject, sq, level);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [subject, sq, level, open]);
 
   function chooseSubject(s: string) {
@@ -156,7 +151,6 @@ export default function CoursePicker({
     try {
       await addCourse(planId, term, c.courseId, credits);
       router.refresh();
-      // keep modal open so user can add more
     } catch {
       alert("Failed to add course.");
     }
@@ -180,7 +174,6 @@ export default function CoursePicker({
               </button>
             </div>
 
-            {/* Subject picker */}
             <div className="mt-3">
               <label className="text-xs text-muted-foreground">Subject</label>
               <div className="relative mt-1" ref={subjBoxRef}>
@@ -224,7 +217,6 @@ export default function CoursePicker({
               </div>
             </div>
 
-            {/* Filters + list */}
             {subject && (
               <>
                 <div className="mt-4 flex flex-wrap items-center gap-2">

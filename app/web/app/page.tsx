@@ -1,10 +1,8 @@
-// web/app/page.tsx
 import Link from "next/link";
 
 export default function Landing() {
   return (
     <div className="space-y-12">
-      {/* HERO */}
       <section className="relative overflow-hidden rounded-2xl border bg-card shadow-[var(--shadow-card)]">
         <div className="absolute inset-0 -z-10 opacity-70"
              style={{
@@ -28,7 +26,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* FEATURES */}
       <section className="grid gap-4 md:grid-cols-3">
         <Feature
           title="Subject-first search"
@@ -47,7 +44,6 @@ export default function Landing() {
         />
       </section>
 
-      {/* CTA */}
       <section className="surface p-8 text-center">
         <h2 className="text-2xl font-bold">Ready to build your first plan?</h2>
         <p className="mt-2 text-muted-foreground">

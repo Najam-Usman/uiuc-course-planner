@@ -8,7 +8,6 @@ import { saveAudit, getLatestAudit } from "../models/Audit.js";
 
 const router = Router();
 
-// ---------- parsing helpers (existing) ----------
 function spawnPromise(cmd, args = [], options = {}) {
   return new Promise((resolve, reject) => {
     const child = spawn(cmd, args, { stdio: ["ignore","pipe","pipe"], shell: false, ...options });
@@ -35,16 +34,14 @@ async function resolvePython() {
   throw new Error("No working Python interpreter found.");
 }
 
-// ---------- routes ----------
 router.get("/ping", (_req, res) => res.json({ ok: true, where: "audits.router" }));
 
-// 1) Parse uploaded PDF -> JSON (kept as you have it, but robust)
 const upload = multer({
   storage: multer.diskStorage({
     destination: os.tmpdir(),
     filename: (_req, file, cb) => cb(null, `audit_${Date.now()}${path.extname(file.originalname)}`),
   }),
-  limits: { fileSize: 25 * 1024 * 1024 }, // 25 MB
+  limits: { fileSize: 25 * 1024 * 1024 }, 
   fileFilter: (_req, file, cb) => cb(null, /pdf$/i.test(file.mimetype)),
 });
 
@@ -70,7 +67,6 @@ print(json.dumps(asdict(pa), ensure_ascii=False))
     });
 
     const raw = JSON.parse(stdout);
-    // Lightweight response (matches your UI)
     const response = {
       meta: {
         program: raw.meta.program,
@@ -107,7 +103,6 @@ print(json.dumps(asdict(pa), ensure_ascii=False))
 });
 
 
-// 2) Persist a parsed audit (now also stores `needs[]`)
 router.post("/", async (req, res) => {
   try {
     const { audit, includeRaw, needs } = req.body || {};
@@ -127,7 +122,6 @@ router.post("/", async (req, res) => {
 });
 
 
-// 3) Get the latest audit for the current user
 router.get("/latest", async (_req, res) => {
   try {
     const doc = await getLatestAudit("demo");

@@ -26,7 +26,7 @@ export default function ProgressClient({ initial }: { initial: AuditDoc | null }
     if (latest) return;
     fetchLatestAudit().then((doc) => {
       setLatest(doc);
-      setNeeds({ geneds: [], courses: [] }); // recompute on next upload
+      setNeeds({ geneds: [], courses: [] }); 
     }).catch(() => {});
   }, [latest]);
 

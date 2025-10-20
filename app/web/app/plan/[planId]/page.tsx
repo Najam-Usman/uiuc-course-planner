@@ -27,7 +27,6 @@ export default async function PlanPage({
 
   return (
     <div className="space-y-6">
-      {/* Compact toolbar */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/plans" className="btn btn-ghost h-8 px-3">← Plans</Link>
@@ -39,10 +38,8 @@ export default async function PlanPage({
         </div>
       </div>
 
-      {/* Add semester */}
       <AddTermBar planId={plan._id} />
 
-      {/* Semesters */}
       <div className="grid gap-4">
         {plan.semesters.map((s) => {
           const used = creditsOf(s.term);

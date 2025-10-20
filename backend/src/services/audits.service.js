@@ -29,7 +29,6 @@ pa = parse(pdf)
 print(json.dumps(asdict(pa), ensure_ascii=False))
 `;
 
-  // Add PYTHONPATH so "import audit_parser" resolves to /app/audit-parser
   const env = { ...process.env, PYTHONPATH: "/app/audit-parser" };
 
   const { stdout } = await spawnPromise(python, ["-c", pyCode, pdfAbsPath], {

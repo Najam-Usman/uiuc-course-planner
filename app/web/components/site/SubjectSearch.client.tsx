@@ -26,7 +26,6 @@ export default function SubjectSearch({
   const API_BASE =
     process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:4000";
 
-  // Debounced fetch for subjects
   const fetchSubjects = useCallback(
     (q: string) => {
       if (abortRef.current) abortRef.current.abort();
@@ -58,7 +57,6 @@ export default function SubjectSearch({
     [API_BASE]
   );
 
-  // Debounce: 200ms
   useEffect(() => {
     const t = setTimeout(() => {
       fetchSubjects(query);
@@ -66,7 +64,6 @@ export default function SubjectSearch({
     return () => clearTimeout(t);
   }, [query, fetchSubjects]);
 
-  // Close on click outside
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
       if (!boxRef.current) return;

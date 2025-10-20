@@ -1,14 +1,10 @@
-// backend/src/routes/courses.js
 import { Router } from "express";
 import Course from "../models/Course.js";
 import GpaRecord from "../models/GpaRecord.js";
 
 const router = Router();
 
-/**
- * GET /courses/subjects
- * Optional: ?q=STAT  -> server-side filter; returns prefix-first ordering when q provided
- */
+
 router.get("/subjects", async (req, res) => {
   try {
     const q = String(req.query.q || "").trim();
@@ -35,11 +31,7 @@ router.get("/subjects", async (req, res) => {
   }
 });
 
-/**
- * GET /courses/by-subject/:subject
- * Lists courses in a subject; supports within-subject search (q) and level.
- * Adds avgGpa from gparecords and normalizes Gen Eds to `genEds` array.
- */
+
 router.get("/by-subject/:subject", async (req, res) => {
   try {
     const subject = String(req.params.subject || "").trim().toUpperCase();
@@ -80,7 +72,6 @@ router.get("/by-subject/:subject", async (req, res) => {
           avgGpa: {
             $cond: [{ $gt: [{ $size: "$gpaDocs" }, 0] }, { $avg: "$gpaDocs.avgGpa" }, null],
           },
-          // normalize possible places Gen Eds might live into a single array field `genEds`
           genEds: {
             $ifNull: [
               "$genEds",
@@ -107,10 +98,7 @@ router.get("/by-subject/:subject", async (req, res) => {
   }
 });
 
-/**
- * Simple prefix search (compat) — also emits avgGpa + genEds
- * GET /courses?q=<query>
- */
+
 router.get("/", async (req, res) => {
   try {
     const q = (req.query.q || "").toString().trim();
@@ -159,10 +147,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-/**
- * KEEP LAST so it doesn't swallow /subjects or /by-subject/*
- * GET /courses/:courseId
- */
+
 router.get("/:courseId", async (req, res) => {
   try {
     const { courseId } = req.params;
@@ -174,7 +159,6 @@ router.get("/:courseId", async (req, res) => {
       { $group: { _id: "$courseId", avg: { $avg: "$avgGpa" }, terms: { $addToSet: "$term" } } },
     ]);
 
-    // normalize genEds in the detail response too
     const genEds =
       course.genEds ??
       course.genEdCategories ??

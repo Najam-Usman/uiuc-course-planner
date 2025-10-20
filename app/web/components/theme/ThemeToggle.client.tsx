@@ -28,7 +28,7 @@ export default function ThemeToggle() {
     setTheme(next);
   }
 
-  if (!theme) return null; // avoid hydration mismatch
+  if (!theme) return null; 
 
   const isDark = theme === DARK;
   return (

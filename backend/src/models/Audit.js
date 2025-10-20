@@ -24,7 +24,7 @@ export async function getLatestAudit(userId = "demo") {
   const doc = await db
     .collection(COLLECTION)
     .find({ userId })
-    .project({ raw: 0 }) // exclude raw
+    .project({ raw: 0 }) 
     .sort({ createdAt: -1 })
     .limit(1)
     .next();

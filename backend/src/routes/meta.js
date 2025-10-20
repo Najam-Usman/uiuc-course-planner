@@ -1,4 +1,3 @@
-// src/routes/meta.js
 import { Router } from "express";
 import { getMajors, getColleges, refreshCatalog } from "../services/catalogCache.js";
 

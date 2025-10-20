@@ -1,4 +1,3 @@
-// web/components/site/SemesterShell.tsx
 import React from "react";
 
 export default function SemesterShell({
